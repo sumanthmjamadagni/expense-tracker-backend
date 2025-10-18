@@ -7,7 +7,13 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://your-netlify-app.netlify.app'],
+  origin: [
+    'http://localhost:3000',
+    'https://expense-tracker-6ffd79yom-sumanth-ms-projects-bb61e3d2.vercel.app',
+    'https://expense-tracker-sumanth-ms-projects-bb61e3d2.vercel.app',
+    'https://mernexpensetrack.netlify.app',
+    /https:\/\/.*\.netlify\.app$/
+  ],
   credentials: true
 }));
 app.use(express.json());
